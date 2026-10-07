@@ -9,8 +9,11 @@ test("CI/CD Failure - Locator Issue", async ({ page }) => {
     ).toBeVisible();
 
     // Intentional failure
-    await expect(
-        page.getByRole("heading", { name: "Automated Testing" })
-    ).toBeVisible();
+    // await expect(
+    //     page.getByRole("heading", { name: "Automated Testing" })
+    // ).toBeVisible();
+
+    //Checkpoint 1 — Intentionally Create One CI Failure
+    await expect(page).toHaveTitle("DemoQA");
 
 });

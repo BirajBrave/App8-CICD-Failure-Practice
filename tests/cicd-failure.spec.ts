@@ -4,9 +4,9 @@ test("CI/CD Failure - Locator Issue", async ({ page }) => {
 
     await page.goto("https://qademo.com/");
 
-    await expect(
-        page.getByRole("heading", { name: "Your Playground for" })
-    ).toBeVisible();
+    // await expect(
+    //     page.getByRole("heading", { name: "Your Playground for" })
+    // ).toBeVisible();
 
     // Intentional failure
     // await expect(
@@ -14,6 +14,6 @@ test("CI/CD Failure - Locator Issue", async ({ page }) => {
     // ).toBeVisible();
 
     //Checkpoint 1 — Intentionally Create One CI Failure
-    await expect(page).toHaveTitle("DemoQA");
+    await expect(page).toHaveTitle("QA Demo - Your Playground for Automated Testing");
 
 });

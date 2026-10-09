@@ -6,7 +6,7 @@ test("CI/CD Failure - Locator Issue", async ({ page }) => {
     await expect(page).toHaveTitle("QA Demo - Your Playground for Automated Testing");
 
     await page.getByRole("button", {name: "Sign Up"}).click();
-    await expect(page).toHaveURL("https://qademo.com/signup2");
+    await expect(page).toHaveURL("https://qademo.com/signup");
 
     const emailAddress = page.getByPlaceholder("john@example.com");
     const phoneNumber = page.getByPlaceholder("+1 (555) 123-4567");
@@ -20,6 +20,6 @@ test("CI/CD Failure - Locator Issue", async ({ page }) => {
     await password.fill("mona@2015");
     await confirmPassword.fill("mona@2015");
 
-    await page.locator('[data-testid="signup-submit3-button"]').click();
+    await page.locator('[data-testid="signup-submit-button"]').click();
 
 });
